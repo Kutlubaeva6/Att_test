@@ -76,12 +76,12 @@ class Program
     }
 }
 ```
+
 5. Результат вывода:
-<kbd>
+
 ![Resalt](testProgram.png)
-<kbd>
+
 
 6. Коммиты:
-<kbd>
+
 ![Коммит](коммиты.png)
-<kbd>
