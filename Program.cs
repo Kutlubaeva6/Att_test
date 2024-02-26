@@ -2,7 +2,6 @@
 //  длина которых меньше, либо равна 3 символам.
 //  Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
 //  При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
-
 // Примеры:
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
@@ -10,43 +9,44 @@
 
 using System;
 
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Enter array elements separated by commas, without spaces: ");
+        string input = Console.ReadLine();
+        string[] inputArray = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+        string[] resultArray = FilterStr(inputArray);
+        Console.WriteLine("Ready array: ");
+        foreach (string str in resultArray)
         {
-            Console.WriteLine("Enter array elements separated by commas: ")
-            string[] inputArray = input.Splint(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-            string[] resultArray = FilterStr(inputArray);
-            Console.WriteLine("Ready array: ")
+            Console.WriteLine(str);
+        }
+    }
 
-        } 
-
-
-
-        static string[] FilterStr(string[] inputArray)
+    static string[] FilterStr(string[] inputArray)
+    {
+        int count = 0;
+        for (int i = 0; i < inputArray.Length; i++)
         {
-            int count = 0;
-            for (int i = 0; i < inputArray.Length; i++)
+            if (inputArray[i].Length <= 3)
             {
-                if (inputArray[i].Length <=3)
-                {
-                    count++
-                }
+                count++;
             }
         }
 
         string[] resultArray = new string[count];
         int index = 0;
-        fot (int i = 0; i < inputArray.Length; i++)
+        for (int i = 0; i < inputArray.Length; i++)
         {
-            if (inputArray[i.Length <= 3])
+            if (inputArray[i].Length <= 3)
             {
-                resultArray[index] = inputArray[i]
-                index++
+                resultArray[index] = inputArray[i];
+                index++;
             }
         }
-        
-        return resultArray
 
-
+        return resultArray;
     }
+}
