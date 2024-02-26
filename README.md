@@ -78,4 +78,8 @@ class Program
 ```
 5. Результат вывода:
 
+![Resalt](testProgram.png)
+
 6. Коммииты:
+
+![Коммит](коммиты.png)
