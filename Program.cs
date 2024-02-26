@@ -12,6 +12,17 @@ using System;
 
     class Program
     {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter array elements separated by commas: ")
+            string[] inputArray = input.Splint(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+            string[] resultArray = FilterStr(inputArray);
+            Console.WriteLine("Ready array: ")
+
+        } 
+
+
+
         static string[] FilterStr(string[] inputArray)
         {
             int count = 0;
@@ -34,6 +45,8 @@ using System;
                 index++
             }
         }
+        
+        return resultArray
 
 
     }
