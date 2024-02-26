@@ -23,9 +23,11 @@
 
 1. Созданный  репозиторий: **Att_test**
 
-2. блок схема [![Схема]("C:\Users\kutlu\Downloads\diagram.png")](https://github.com/Kutlubaeva6/Att_test/blob/main/README.md)
+2. Блок-схема алгоритма: 
 
-3. файл редми
+![схема](diagram.png)
+
+3. Текстовое описание решения (файл **README.md**).
 
 4. Программа находится в ветке [`main`](https://github.com/Kutlubaeva6/Att_test/blob/main/Program.cs "Открыть решение")
 Код программы:
