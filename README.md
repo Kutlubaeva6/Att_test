@@ -21,15 +21,58 @@
 
 ## Решение:
 
-1. имя репозитория
+1. Созданный  репозиторий: **Att_test**
 
-2. блок схема (картинка)
+2. блок схема [![Схема]("C:\Users\kutlu\Downloads\diagram.png")](https://github.com/Kutlubaeva6/Att_test/blob/main/README.md)
 
 3. файл редми
 
-4. Программа находится в ветке [`master`](/Att_test/Program.cs "Открыть решение")
+4. Программа находится в ветке [`main`](https://github.com/Kutlubaeva6/Att_test/blob/main/Program.cs "Открыть решение")
 Код программы:
 ```cs
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter array elements separated by commas, without spaces: ");
+        string input = Console.ReadLine();
+        string[] inputArray = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+        string[] resultArray = FilterStr(inputArray);
+        Console.WriteLine("Ready array: ");
+        foreach (string str in resultArray)
+        {
+            Console.WriteLine(str);
+        }
+    }
+
+    static string[] FilterStr(string[] inputArray)
+    {
+        int count = 0;
+        for (int i = 0; i < inputArray.Length; i++)
+        {
+            if (inputArray[i].Length <= 3)
+            {
+                count++;
+            }
+        }
+
+        string[] resultArray = new string[count];
+        int index = 0;
+        for (int i = 0; i < inputArray.Length; i++)
+        {
+            if (inputArray[i].Length <= 3)
+            {
+                resultArray[index] = inputArray[i];
+                index++;
+            }
+        }
+
+        return resultArray;
+    }
+}
 ```
 5. Результат вывода:
 
